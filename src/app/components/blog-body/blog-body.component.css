@@ -1,0 +1,149 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #0a0a0a;
+  font-family: sans-serif;
+}
+
+/* ================= FILTER BAR ================= */
+
+.filter-bar {
+  background: #0a0a0a;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid #262626;
+  z-index: 1030;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  background: #161616;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 12px 15px 12px 45px;
+  color: white;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #ff6a00;
+}
+
+.search-box i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.btn-filter {
+  background: #161616;
+  border: 1px solid #262626;
+  color: #aaa;
+  padding: 8px 18px;
+  border-radius: 12px;
+  margin: 5px;
+  transition: .3s;
+}
+
+.btn-filter:hover {
+  border-color: rgba(255,106,0,.4);
+  color: white;
+}
+
+.btn-filter.active {
+  background: linear-gradient(45deg,#ff6a00,#ff8c00);
+  border: none;
+  color: white;
+}
+
+/* ================= CARD ================= */
+.bb{
+    background-color: #0a0a0a;
+}
+.view-toggle{
+  background:#161616;
+  border:1px solid #262626;
+  border-radius:12px;
+}
+
+.toggle-btn{
+  border:none;
+  background:transparent;
+  color:#888;
+  padding:8px 10px;
+  border-radius:8px;
+  transition:.3s;
+}
+
+.toggle-btn:hover{
+  color:white;
+}
+
+.toggle-btn.active{
+  background:#ff6a00;
+  color:white;
+}
+/* ================= PAGINATION ================= */
+
+.pagination-custom {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.page-btn {
+  background: #161616;
+  border: 1px solid #262626;
+  color: #aaa;
+  padding: 10px 16px;
+  border-radius: 12px;
+  transition: .3s;
+}
+
+.page-btn:hover {
+  border-color: rgba(255,106,0,.4);
+  color: white;
+}
+
+.page-btn.active {
+  background: linear-gradient(45deg,#ff6a00,#ff8c00);
+  border: none;
+  color: white;
+}
+.no-results-icon {
+  width: 96px;
+  height: 96px;
+  background: #161616;
+  border: 1px solid #262626;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.no-results-icon svg {
+  width: 48px;
+  height: 48px;
+  color: #999;
+}
+
+.btn-reset-filters {
+  background: linear-gradient(45deg,#ff6a00,#ff8c00);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-reset-filters:hover {
+  opacity: 0.85;
+}

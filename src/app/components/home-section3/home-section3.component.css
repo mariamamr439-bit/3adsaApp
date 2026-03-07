@@ -1,0 +1,26 @@
+.categories-section {
+  background: #111111;
+  border-color: #262626 !important;
+}
+.first{
+    width: 12%;
+    background-color: #25160b;
+    border: 1px solid #64310e;
+}
+.text-orange{
+    color: #f67216;
+}
+.text-gray{
+    color: #8e8e8e;
+}
+.icon1{
+  color: #f67216;
+  font-size: 6px;
+}
+.icon2{
+  color: #f67216;
+  font-size: 8px;
+  filter: drop-shadow(0 4px 6px rgba(246, 114, 22,0.3));
+  border-radius: 50%;
+}
+

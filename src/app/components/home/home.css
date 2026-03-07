@@ -1,0 +1,76 @@
+.hero {
+  position: relative;
+  padding-top: 150px;
+  overflow: hidden; 
+  background: linear-gradient(-135deg, #0A0A0A 0%, #211209 50%, #0A0A0A 100%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background-image:
+    linear-gradient(rgba(38,38,38,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(38,38,38,0.5) 1px, transparent 1px);
+  background-size: 60px 60px; 
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+
+}
+.first{
+    width: 15%;
+    background-color: #25160b;
+    border: 1px solid #64310e;
+}
+.icon1{
+  color: #f67216;
+  font-size: 6px;
+}
+.icon2{
+  color: #f67216;
+  font-size: 8px;
+  filter: drop-shadow(0 4px 6px rgba(246, 114, 22,0.3));
+  border-radius: 50%;
+}
+.f{
+  background-image: linear-gradient(90deg, #fa8f3a, #faaa20);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gr-bg {
+  background-image: linear-gradient(90deg, #ea580c, #c3420c);
+  padding: 8px 10px;
+}
+.btn.gr-bg{
+    transition: all 0.3s ease;
+}
+.btn.gr-bg:hover{
+  transform: translateY(-5px);
+  box-shadow: 1px 1px 22px rgba(194, 70, 42, 0.2);
+}
+.btn.gr-bg:hover i{
+  transform: translateX(-5px);
+}
+
+.btn.btn-outline-primary{
+  border-color: gray;
+}
+.btn.btn-outline-primary:hover{
+  border-color: #f97316;
+  background-color: #2d190b;
+}
+.btn.btn-outline-primary:hover span , .btn.btn-outline-primary:hover i{
+  color: #f97316;
+}
+.in{
+  background-color: #151414;
+  border: 0.5px solid rgb(40, 38, 38);
+}
+.in i{
+  color: #ff6900;
+}

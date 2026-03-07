@@ -1,0 +1,62 @@
+.featured-section {
+  background: #0a0a0a;
+}
+
+.overlay-gradient {
+  width: 30%;
+  background: linear-gradient(to left, rgba(255, 115, 0, 0.08), transparent);
+}
+
+.section-label {
+  color: #ff7a00;
+  font-weight: 600;
+}
+
+.ping-wrapper {
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+
+.ping {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ff7a00;
+  border-radius: 50%;
+  animation: ping 1.5s infinite;
+  opacity: 0.6;
+}
+
+.dot {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ff7a00;
+  border-radius: 50%;
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.text-gray {
+  color: #8e8e8e;
+}
+.gr-bg {
+  background-image: linear-gradient(90deg, #ea580c, #c3420c);
+  padding: 8px 10px;
+}

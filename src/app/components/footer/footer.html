@@ -1,0 +1,67 @@
+<footer class="site-footer" dir="rtl">
+  <div class="footer-container">
+
+    <!-- العمود 1 -->
+    <div class="footer-col">
+      <div class="d-flex gap-2">
+        <div class="logo"> <span>ع</span></div>
+        <span class="text-white h5 fw-bold">عدسة</span>
+      </div>
+      <p>
+        مدونة متخصصة في فن التصوير الفوتوغرافي.
+        نشارك معكم أسرار المحترفين ونصائح عملية
+        لتطوير مهاراتكم.
+      </p>
+
+      <div class="social">
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- العمود 2 -->
+    <div class="footer-col">
+      <h6>استكشف</h6>
+      <ul>
+        <li><a routerLink="/home">الرئيسية</a></li>
+        <li><a routerLink="/blog">المدونة</a></li>
+        <li><a routerLink="/about">من نحن</a></li>
+      </ul>
+    </div>
+
+    <!-- العمود 3 -->
+    <div class="footer-col">
+      <h6>التصنيفات</h6>
+      <ul>
+        <li><a [routerLink]="['/blog']" [queryParams]="{category: 'إضاءة'}">إضاءة</a></li>
+        <li><a [routerLink]="['/blog']" [queryParams]="{category: 'بورتريه'}">بورتريه</a></li>
+        <li><a [routerLink]="['/blog']" [queryParams]="{category: 'مناظر طبيعية'}">مناظر طبيعية</a></li>
+        <li><a [routerLink]="['/blog']" [queryParams]="{category: 'تقنيات'}">تقنيات</a></li>
+      </ul>
+    </div>
+
+    <!-- العمود 4 -->
+    <div class="footer-col">
+      <h6>ابق على اطلاع</h6>
+      <p>اشترك للحصول على أحدث المقالات  <br>والتحديثات</p>
+
+      <div class="subscribe">
+        <input type="email" placeholder="ادخل بريدك الإلكتروني">
+        <button class="rounded-pill">اشترك</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- السطر الأخير -->
+  <div class="copyright">
+    <span>© 2026 عدسة — جميع الحقوق محفوظة</span>
+
+    <div class="footer-links">
+      <a routerLink="/privacy">سياسة الخصوصية</a>
+      <a routerLink="/terms">شروط الخدمة</a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,38 @@
+
+<div class="blog-card" [routerLink]="['/blog' , data.slug]">
+          <div class="img-wrapper">
+            <img [src]="data.image" />
+            <div class="overlay"></div>
+            <span class="badge-category text-white">{{ data.category }}</span>
+          </div>
+
+          <div class="content">
+            <div class="meta">
+              <span>{{ data.readTime }}</span>
+              <span class="dot"></span>
+              <span>{{ data.date }}</span>
+            </div>
+
+            <h5 #titleRef class="text-white">
+              {{ data.title }}
+            </h5>
+
+            <p>
+              {{ data.excerpt }}
+            </p>
+
+            <div class="card-footer-custom">
+              <div class="author">
+                <img [src]="data.author.avatar" />
+                <div>
+                  <div class="name text-white">{{ data.author.name }}</div>
+                  <div class="job">{{ data.author.role }}</div>
+                </div>
+              </div>
+
+              <div class="arrow">
+                <i class="fa-solid fa-angle-left"></i>
+              </div>
+            </div>
+          </div>
+        </div>

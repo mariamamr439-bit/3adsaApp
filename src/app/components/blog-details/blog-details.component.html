@@ -1,0 +1,234 @@
+@if (post) {
+  <article class="blog-page">
+    <!-- HERO -->
+
+    <section class="hero-section position-relative">
+      <img [src]="post.image" class="hero-img" />
+
+      <div class="hero-overlay"></div>
+
+      <div class="container position-relative hero-content">
+        <!-- breadcrumb -->
+
+        <nav class="custom-breadcrumb d-inline-flex align-items-center gap-2 px-4 py-2 mt-5">
+          <a routerLink="/home" class="text-light opacity-75">
+            <i class="fa-solid fa-home"></i>
+          </a>
+
+          <i class="fa-solid fa-chevron-left small opacity-50"></i>
+
+          <a routerLink="/blog" class="text-light text-decoration-none opacity-75"> المدونة </a>
+
+          <i class="fa-solid fa-chevron-left small opacity-50"></i>
+
+          <span class="text-or fw-semibold"> {{ post.category }} </span>
+        </nav>
+
+        <!-- title -->
+
+        <div class="hero-text mt-5">
+          <div class="d-flex flex-wrap gap-3 align-items-center mb-4">
+            <a  [routerLink]="['/blog']" [queryParams]="{category:post.category}" class="badge bg-or  rounded-pill text-white px-3 py-2"> {{ post.category }} </a>
+
+            <div class="text-light opacity-75 small d-flex gap-3">
+              <span>
+                <i class="fa-regular fa-calendar me-1"></i>
+                {{ post.date }}
+              </span>
+
+              <span>
+                <i class="fa-regular fa-clock me-1"></i>
+                {{ post.readTime }}
+              </span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">{{ post.title }}</h1>
+
+          <div class="author-box d-flex align-items-center gap-3 mt-4">
+            <img [src]="post.author.avatar" />
+
+            <div>
+              <p class="text-white fw-bold m-0">{{ post.author.name }}</p>
+
+              <small class="text-secondary">{{ post.author.role }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+
+    <div class="container py-5">
+      <div class="row g-5">
+        <!-- ARTICLE -->
+
+        <div class="col-lg-8">
+          <div class="quote-box">
+            {{ post.excerpt }}
+          </div>
+          @for (section of sections; track section.id) {
+            @if (section.title === 'مقدمة') {
+              <p class="article-text">
+                {{ section.content }}
+              </p>
+            } @else {
+              <h2 class="article-heading" #sectionRef> 
+                <div class="icon-box">
+                  <i class="fa-solid fa-camera fs-2"></i>
+                </div>
+                {{ section.title }}
+              </h2>
+
+              <p class="article-text">
+                {{ section.content }}
+              </p>
+            }
+          }
+          <!-- TAGS -->
+
+          <div class="tags-box">
+            <div class="vv d-flex align-items-baseline gap-1">
+              <div class="icon-box">
+                <i class="fa-solid fa-tags"></i>
+              </div>
+              <h5 class="text-white mb-3">الوسوم</h5>
+            </div>
+
+            <span class="tag">#إضاءة</span>
+            <span class="tag">#الساعة الذهبية</span>
+            <span class="tag">#تصوير خارجي</span>
+          </div>
+          <div class="share-box mt-3 p-4">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+              <div class="d-flex align-items-center gap-2">
+                <div class="icon-title">
+                  <i class="fa-solid fa-share-nodes"></i>
+                </div>
+
+                <h5 class="share-title mb-0">شارك المقال</h5>
+              </div>
+
+              <div class="d-flex gap-2">
+                <button class="share-btn twitter">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </button>
+
+                <button class="share-btn linkedin">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </button>
+
+                <button class="share-btn whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </button>
+
+                <button class="share-btn link">
+                  <i class="fa-solid fa-link"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="author-card mt-4 p-4">
+            <div
+              class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start gap-4"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+                alt="سالم أحمد"
+                class="author-img"
+              />
+
+              <div class="author-text text-center text-sm-end flex-grow-1">
+                <span class="author-label"> كاتب المقال </span>
+
+                <h3 class="author-name">سالم أحمد</h3>
+
+                <p class="author-job">مصور محترف</p>
+
+                <p class="author-desc">
+                  مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+
+        <div class="col-lg-4">
+          <aside class="sidebar">
+            <div class="sidebar-card">
+              <div class="d-flex align-items-baseline gap-1">
+                <div class="icon-box">
+                  <i class="fa-solid fa-list"></i>
+                </div>
+                <h6 class="text-white mb-3">محتويات المقال</h6>
+              </div>
+              <nav class="toc-nav">
+                @for (section of sections; track section.id; let i = $index) {
+                  <a (click)="scrollToSection(i)" class="toc-link">
+                    <span class="toc-number">1</span>
+                    <span class="toc-text">{{section.title}}</span>
+                  </a>
+                }
+
+                <!-- <a href="#section-1" class="toc-link">
+                  <span class="toc-number">2</span>
+                  <span class="toc-text">التحضير المسبق</span>
+                </a>
+
+                <a href="#section-2" class="toc-link">
+                  <span class="toc-number">3</span>
+                  <span class="toc-text">إعدادات الكاميرا</span>
+                </a>
+
+                <a href="#section-3" class="toc-link">
+                  <span class="toc-number">4</span>
+                  <span class="toc-text">التكوين الفني</span>
+                </a>
+
+                <a href="#section-4" class="toc-link">
+                  <span class="toc-number">5</span>
+                  <span class="toc-text">الخلاصة</span>
+                </a> -->
+              </nav>
+            </div>
+
+            <div class="info-box p-4">
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="info-card text-center p-3">
+                    <i class="fa-regular fa-clock info-icon mb-2"></i>
+                    <p class="info-title">8 دقائق للقراءة</p>
+                    <p class="info-sub">وقت القراءة</p>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="info-card text-center p-3">
+                    <i class="fa-regular fa-calendar info-icon mb-2"></i>
+                    <p class="info-title small">١٥ يناير</p>
+                    <p class="info-sub">تاريخ النشر</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="subscribe-card mt-3 p-4 text-center">
+              <div class="icon-box mx-auto mb-3">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+
+              <h3 class="subscribe-title mb-2">لا تفوّت جديدنا</h3>
+
+              <p class="subscribe-text mb-3">اشترك للحصول على أحدث المقالات</p>
+
+              <a href="#" class="btn subscribe-btn w-100"> تصفح المزيد </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </article>
+}

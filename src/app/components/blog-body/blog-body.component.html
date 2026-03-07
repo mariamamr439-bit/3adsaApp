@@ -1,0 +1,104 @@
+<section class="filter-bar bb sticky-top">
+  <div class="container py-4">
+    <div class="row justify-content-between align-items-center gy-3">
+      <div class="col-md-3">
+        <div class="search-box">
+          <input
+            type="text"
+            placeholder="ابحث في المقالات..."
+            [(ngModel)]="searchTerm"
+            (ngModelChange)="filterPost()"
+          />
+          <i class="bi bi-search"></i>
+        </div>
+      </div>
+      <div class="col-md-7 text-md-end text-center">
+        @for (category of allcategories; track $index) {
+          <button
+            class="btn-filter"
+            (click)="selectCategory(category); filterPost(category.name)"
+            [class]="selectedCat === category ? 'active ' : ''"
+          >
+            {{ category.name }}
+          </button>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container-fluid bb py-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <p class="text-white mb-0">
+      عرض <span class="fw-bold text-white">{{ filteredPosts.length }}</span> مقالات
+    </p>
+    <!-- toggle -->
+    <div class="view-toggle d-flex align-items-center p-1">
+      <!-- Grid -->
+      <button class="toggle-btn" [class.active]="viewMode === 'grid'" (click)="setView('grid')">
+        <i class="fa-solid fa-grip"></i>
+      </button>
+
+      <!-- List -->
+      <button class="toggle-btn" [class.active]="viewMode === 'list'" (click)="setView('list')">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    @if (filteredPosts.length === 0) {
+      <div class="col-12 text-center py-5">
+        <div class="mx-auto mb-4 no-results-icon">
+          <!-- أيقونة SVG -->
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+        </div>
+        <h3 class="text-white fw-bold mb-3">لا توجد مقالات</h3>
+        <p class="text-muted mb-4">حاول تعديل البحث أو الفلتر للعثور على ما تبحث عنه.</p>
+        <button class="btn-reset-filters" (click)="resetFilters()">إعادة تعيين الفلاتر</button>
+      </div>
+    }
+    @for (post of paginatedPosts; track $index) {
+      @if (viewMode === 'grid') {
+        <div class="col-md-6 col-lg-4">
+          <app-card [data]="post"></app-card>
+        </div>
+      }
+      @if (viewMode === 'list') {
+        <div class="col-12">
+          <app-card-list [data]="post"></app-card-list>
+        </div>
+      }
+    }
+  </div>
+</section>
+<div class="container-fluid text-center bb pb-5">
+  @if (totalPages > 1) {
+    <div class="pagination-custom">
+      <button class="page-btn" (click)="currentPage > 1 && paginatePosts(currentPage - 1)">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+
+      @for (page of pageNumbers; track page) {
+        <button
+          class="page-btn"
+          (click)="paginatePosts(page)"
+          [class.active]="currentPage === page"
+        >
+          {{ page }}
+        </button>
+      }
+
+      <button class="page-btn" (click)="currentPage < totalPages && paginatePosts(currentPage + 1)">
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+    </div>
+    <p class="text-white small pt-3">صفحة {{ currentPage }} من {{ totalPages }}</p>
+  }
+</div>

@@ -1,0 +1,78 @@
+.category-card {
+  position: relative;
+  background: #161616;
+  border: 1px solid #262626;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.category-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ff7a00, #ffb300);
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 0;
+}
+
+.category-card:hover::before {
+  opacity: 1;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,115,0,.4);
+}
+
+.category-card * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Icon */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: rgba(255,115,0,.1);
+  border: 1px solid rgba(255,115,0,.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff7a00;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.category-card:hover .icon-box {
+  background: rgba(255,255,255,.2);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Arrow */
+.arrow-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+  background: #262626;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+  color: white;
+}
+
+.category-card:hover .arrow-icon {
+  opacity: 1;
+  background: rgba(255,255,255,.2);
+}
+.text-gray{
+    color: #8e8e8e;
+}

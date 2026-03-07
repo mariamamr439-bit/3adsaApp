@@ -1,0 +1,44 @@
+.hero {
+  position: relative;
+  padding-top: 150px;
+  overflow: hidden; 
+  background-image: linear-gradient(-135deg, #0A0A0A 0%, #211209 50%, #0A0A0A 100%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background-image:
+    linear-gradient(rgba(38,38,38,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(38,38,38,0.5) 1px, transparent 1px);
+  background-size: 60px 60px; 
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+.first{
+    width: 10%;
+    background-color: #25160b;
+    border: 1px solid #64310e;
+}
+.text-o{
+    color: #f97216;
+}
+.icon1{
+  color: #f97216;
+  font-size: 6px;
+}
+.icon2{
+  color: #f97216;
+  font-size: 12px;
+}
+.f{
+  background-image: linear-gradient(90deg, #fa8f3a, #faaa20);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

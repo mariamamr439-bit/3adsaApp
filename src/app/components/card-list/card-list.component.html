@@ -1,0 +1,34 @@
+<div class="card-list" [routerLink]="['/blog' , data.slug]">
+  <article class="card">
+    <a href="/blog/example">
+      <!-- الصورة -->
+      <div class="card-image">
+        <img [src]="data.image">
+        <div class="card-overlay"></div>
+      </div>
+
+      <!-- المحتوى -->
+      <div class="card-content">
+        <div class="card-tags">
+          <span class="tag">{{data.category}}</span>
+          <span class="time">{{data.readTime}}</span>
+          <span class="date">{{data.date}}</span>
+        </div>
+
+        <h2 #titleRef class="card-title">{{data.title}}</h2>
+        <p class="card-desc">{{data.excerpt}}</p>
+
+        <div class="card-footer">
+          <div class="author">
+            <img [src]="data.author.avatar" alt="Author">
+            <div>
+              <p class="author-name">{{data.author.name}}</p>
+              <p class="author-role">{{data.author.role}}</p>
+            </div>
+          </div>
+          <span class="read-more">اقرأ المقال</span>
+        </div>
+      </div>
+    </a>
+  </article>
+</div>

@@ -1,0 +1,52 @@
+<header class="hero">
+  <div class="container">
+    <h1 class="mx-auto fw-bold py-2 f text-center">404</h1>
+    <div class="position-relative d-flex justify-content-center my-5">
+      <!-- أيقونة مربع فوق يمين -->
+      <div class="icon-box icon-top">
+        <i class="fa-solid fa-square fa-bounce"></i>
+      </div>
+
+      <!-- أيقونة دايرة تحت شمال -->
+      <div class="icon-box icon-bottom">
+        <i class="fa-solid fa-circle fa-fade"></i>
+      </div>
+
+      <!-- الدايرة الأساسية -->
+      <div class="circle-404">
+        <i class="fa-regular fa-face-frown"></i>
+      </div>
+    </div>
+    <h2 class="text-white fw-bold text-center p-2">عفواً! الصفحة غير موجودة</h2>
+    <p class="text-center text-light h5 p-2">
+      الصفحة التي تبحث عنها غير موجودة أو تم نقلها. دعنا نعيدك إلى <br />
+      المسار الصحيح.
+    </p>
+    <div class="text-center mb-3">
+      <a href="#" class="btn text-white gr-bg rounded-pill py-3 px-5 fw-medium ms-2">
+        <i class="fa-regular small fa-house text-white"></i>
+        <span class="fs-6 fw-bold mx-1">الذهاب للرئيسية</span>
+      </a>
+      <a
+        routerLink="/blog"
+        class="btn btn-outline-primary text-white rounded-pill py-3 px-5 fw-medium"
+      >
+        <i class="fa-regular fa-newspaper fs-6 ms-2"></i>
+        <span class="fs-6">تصفح المقالات</span>
+      </a>
+    </div>
+    <hr />
+    <p class="text-center text-white">قد تجد هذه مفيدة:</p>
+    <ul class="nav justify-content-center mx-auto">
+      <li class="nav-item">
+        <a class="nav-link text-orange" href="#">الخصوصية</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-orange" routerLink="/about">من نحن</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-orange" routerLink="/blog">المدونة</a>
+      </li>
+    </ul>
+  </div>
+</header>

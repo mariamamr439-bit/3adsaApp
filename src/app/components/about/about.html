@@ -1,0 +1,217 @@
+<header class="hero pb-5">
+  <div class="container">
+    <div class="d-flex justify-content-center py-2 first align-items-center mx-auto rounded-pill">
+      <i class="fa-solid fa-circle fa-fade icon1 mx-1"></i>
+      <i class="fa-solid fa-circle fa-beat icon2 mx-1"></i>
+      <span class="small">من نحن</span>
+    </div>
+    <h1 class="mx-auto fw-bold py-4 text-white display-3 text-center">
+      مهمتنا هي <span class="f">الإعلام والإلهام</span> <br />
+    </h1>
+    <p class="text-center fs-5 text-light">
+      مدونة متخصصة في فن التصوير الفوتوغرافي، نشارك معكم أسرار المحترفين ونصائح عملية <br />
+      لتطوير مهاراتكم. نحن شغوفون بمشاركة المعرفة ومساعدة المصورين على تنمية مهاراتهم من <br />
+      خلال محتوى عالي الجودة.
+    </p>
+    <div class="row g-4 justify-content-center text-center">
+      <div class="col-6 col-md-2">
+        <div class="in rounded-4 py-3 shadow-sm">
+          <i class="fa-solid fa-users fs-4 mb-2"></i>
+          <h6 class="fw-bold f fs-3 mb-1">+2مليون</h6>
+          <small class="text-light">قارئ شهرياً</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="in rounded-4 py-3 shadow-sm">
+          <i class="fa-solid fa-newspaper fs-4 mb-2"></i>
+          <h6 class="fw-bold f fs-3 mb-1">+500</h6>
+          <small class="text-light">مقالة منشورة</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="in rounded-4 py-3 shadow-sm">
+          <i class="fa-solid fa-pen-nib fs-4 mb-2"></i>
+          <h6 class="fw-bold f fs-3 mb-1">+50</h6>
+          <small class="text-light">كاتب خبير</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="in rounded-4 py-3 shadow-sm">
+          <i class="fa-solid fa-book-open fs-4 mb-2"></i>
+          <h6 class="fw-bold f fs-3 mb-1">+15</h6>
+          <small class="text-light">تصنيف</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="values-section py-5">
+  <div class="container">
+    <!-- Title -->
+    <div class="text-center mb-5">
+      <h2 class="section-title d-flex align-items-center justify-content-center gap-3">
+        <span class="line"></span>
+        قيمنا
+        <span class="line reverse"></span>
+      </h2>
+
+      <p class="section-subtitle">المبادئ التي توجه كل ما نقوم بإنشائه</p>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="value-card text-center">
+          <i class="fa-solid fa-bullseye icon"></i>
+          <h5>الجودة أولاً</h5>
+          <p>محتوى مدروس ومكتوب بخبرة</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="value-card text-center">
+          <i class="fa-solid fa-bolt icon"></i>
+          <h5>تركيز عملي</h5>
+          <p>أمثلة واقعية يمكنك تطبيقها اليوم</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="value-card text-center">
+          <i class="fa-solid fa-handshake icon"></i>
+          <h5>المجتمع</h5>
+          <p>تعلم مع آلاف المصورين</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="value-card text-center">
+          <i class="fa-solid fa-arrows-rotate icon"></i>
+          <h5>دائماً محدث</h5>
+          <p>أحدث الاتجاهات وأفضل الممارسات</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="team-section py-5">
+  <div class="container">
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <div class="d-flex justify-content-center my-3 py-2 first align-items-center mx-auto rounded-pill">
+      <i class="fa-solid fa-circle fa-fade icon1 mx-1"></i>
+      <i class="fa-solid fa-circle fa-beat icon2 mx-1"></i>
+      <span class="small">فريقنا</span>
+    </div>
+
+      <h2 class="text-white fw-bold mb-3">تعرف على كتابنا</h2>
+
+      <p class="team-desc mx-auto">
+        فريقنا من المصورين والكتاب ذوي الخبرة شغوفون بمشاركة معرفتهم مع المجتمع.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      @for (post of posts; track post.id) {
+        <div class="col-sm-6 col-lg-4">
+        <div class="team-card text-center">
+          <div class="team-img-wrapper">
+            <img
+              [src]="post.author.avatar"
+              class="team-img"
+            />
+
+            <span class="check-icon">
+              <i class="fa-solid fa-check"></i>
+            </span>
+          </div>
+
+          <h3 class="team-name">{{post.author.name}}</h3>
+          <p class="team-job">{{post.author.role}}</p>
+
+          <div class="team-social">
+            <a href="#" class="text-decoration-none">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="#" class="text-decoration-none">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#" class="text-decoration-none">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      }
+
+      <!-- كرري الكارد -->
+      <!-- <div class="col-sm-6 col-lg-4">
+        <div class="team-card text-center">
+          <div class="team-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100"
+              class="team-img"
+            />
+
+            <span class="check-icon">
+              <i class="fa-solid fa-check"></i>
+            </span>
+          </div>
+
+          <h3 class="team-name">محمد علي</h3>
+          <p class="team-job">مصور بورتريه</p>
+
+          <div class="team-social">
+            <a href="#" class="text-decoration-none">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="#" class="text-decoration-none">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#" class="text-decoration-none">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+<section class="contact-cta py-5 position-relative overflow-hidden">
+
+  <!-- الدواير اللي في الخلفية -->
+  <div class="blur-circle circle-1"></div>
+  <div class="blur-circle circle-2"></div>
+
+  <div class="container text-center position-relative">
+
+    <h2 class="cta-title mb-4">
+      لديك أسئلة؟ دعنا نتحدث!
+    </h2>
+
+    <p class="cta-text mx-auto mb-4">
+      نحب أن نسمع منك. سواء كان لديك سؤال حول محتوانا، أو تريد المساهمة،
+      أو تريد فقط إلقاء التحية، لا تتردد في التواصل.
+    </p>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+
+      <a routerLink="/blog" class="btn-contact">
+        <i class="fa-solid fa-envelope"></i>
+        تواصل معنا
+      </a>
+
+      <a routerLink="/blog" class="btn-blog">
+        تصفح المقالات
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

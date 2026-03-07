@@ -1,0 +1,109 @@
+.hero {
+  position: relative;
+  padding-top: 90px;
+  overflow: hidden; 
+  background-image: linear-gradient(-135deg, #0A0A0A 0%, #211209 50%, #0A0A0A 100%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0; 
+  background-image:
+    linear-gradient(rgba(38,38,38,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(38,38,38,0.5) 1px, transparent 1px);
+  background-size: 60px 60px; 
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+.first{
+    width: 10%;
+    background-color: #25160b;
+    border: 1px solid #64310e;
+}
+.text-o{
+    color: #f97216;
+}
+.icon1{
+  color: #f97216;
+  font-size: 6px;
+}
+.icon2{
+  color: #f97216;
+  font-size: 12px;
+}
+.f{
+  font-size: 190px;
+  background-image: linear-gradient(90deg, #fa8f3a, #faaa20);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.circle-404 {
+  width: 120px;
+  height: 120px;
+  background:#442508 ;
+  border: 2px solid #b34a04;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.circle-404 i {
+  font-size: 50px;
+  color: #f97216  ;
+}
+
+/* الأيقونات الجانبية */
+.icon-box {
+  position: absolute;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.icon-top {
+  top: -2px;
+  right: 41%;
+  transform: translateX(-70%) rotate(20deg);
+  color: #ff8c42;
+}
+
+.icon-bottom {
+  bottom: -4px;
+  left: 44%;
+  transform: translateX(-70%);
+  color: #bb8902;
+}
+.gr-bg {
+  background-image: linear-gradient(90deg, #ea580c, #c3420c);
+  padding: 8px 10px;
+}
+.btn.gr-bg{
+    transition: all 0.3s ease;
+}
+.btn.gr-bg:hover{
+  transform: translateY(-5px);
+  box-shadow: 1px 1px 22px rgba(194, 70, 42, 0.2);
+}
+
+
+.btn.btn-outline-primary{
+  border-color: gray;
+}
+.btn.btn-outline-primary:hover{
+  border-color: #f97316;
+  background-color: #2d190b;
+}
+.btn.btn-outline-primary:hover span , .btn.btn-outline-primary:hover i{
+  color: #f97316;
+}
+.text-orange {
+  color: #ff7a1a !important;
+}

@@ -1,0 +1,22 @@
+<section class="categories-section py-5 border-top border-bottom">
+  <div class="container">
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <div class="d-flex justify-content-center py-2 first align-items-center mx-auto rounded-pill">
+        <i class="fa-solid fa-circle fa-fade icon1 mx-1"></i>
+        <i class="fa-solid fa-circle fa-beat icon2 mx-1"></i>
+        <span class="small text-orange"> التصنيفات</span>
+      </div>
+      <h1 class="mx-auto fw-bold py-4 text-white display-3 text-center">استكشف حسب الموضوع</h1>
+      <p class="text-gray mx-auto">اعثر على محتوى مصمم حسب اهتماماتك</p>
+    </div>
+    <div class="row g-3 justify-content-start">
+       
+      @for (category of allcategories.slice(1); track $index) {
+        <div class="col-6 col-md-3">
+            <app-cardsec3 [category] = "category"> </app-cardsec3>
+        </div>
+    }
+    </div>
+  </div>
+</section>
