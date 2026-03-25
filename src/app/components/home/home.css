@@ -74,3 +74,83 @@
 .in i{
   color: #ff6900;
 }
+/* 📱 Mobile (<768px) */
+@media (max-width: 767px) {
+
+  .hero {
+    padding-top: 80px;
+  }
+
+  .first {
+    width: 50%;
+    padding: 5px 10px;
+  }
+
+  .first .small {
+    font-size: 12px;
+  }
+
+  .icon1 {
+    font-size: 4px;
+  }
+
+  .icon2 {
+    font-size: 6px;
+  }
+
+  .hero h1.display-2 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  .hero p.fs-4 {
+    font-size: 0.9rem;
+  }
+
+  .btn.py-3.px-5 {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+
+  .row.g-3 > div {
+    margin-bottom: 15px;
+  }
+
+  .row.g-3 > div .in h6.f.fs-4 {
+    font-size: 1rem;
+  }
+
+  .row.g-3 > div .in i.fs-4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* 🖥 Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .hero h1.display-2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .hero p.fs-4 {
+    font-size: 1rem;
+  }
+
+  .btn.py-3.px-5 {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .first {
+    width: 25%;
+  }
+
+  .row.g-3 > div .in h6.f.fs-4 {
+    font-size: 1.2rem;
+  }
+
+  .row.g-3 > div .in i.fs-4 {
+    font-size: 1.5rem;
+  }
+}

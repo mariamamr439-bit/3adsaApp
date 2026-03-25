@@ -1,33 +1,32 @@
 .hero {
   position: relative;
   padding-top: 150px;
-  overflow: hidden; 
-  background: linear-gradient(-135deg, #0A0A0A 0%, #211209 50%, #0A0A0A 100%);
+  overflow: hidden;
+  background: linear-gradient(-135deg, #0a0a0a 0%, #211209 50%, #0a0a0a 100%);
 }
 
 .hero::before {
-  content: "";
+  content: '';
   position: absolute;
-  inset: 0; 
+  inset: 0;
   background-image:
-    linear-gradient(rgba(38,38,38,0.5) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(38,38,38,0.5) 1px, transparent 1px);
-  background-size: 60px 60px; 
+    linear-gradient(rgba(38, 38, 38, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(38, 38, 38, 0.5) 1px, transparent 1px);
+  background-size: 60px 60px;
   z-index: 1;
 }
 
 .hero > * {
   position: relative;
   z-index: 2;
-
 }
-.text-o{
-    color: #f67216;
+.text-o {
+  color: #f67216;
 }
 .circle-404 {
   width: 60px;
   height: 60px;
-  background:#231309 ;
+  background: #231309;
   border: 1px solid #b34a04;
   border-radius: 20%;
   display: flex;
@@ -39,21 +38,21 @@
 
 .circle-404 i {
   font-size: 25px;
-  color: #f97216  ;
+  color: #f97216;
 }
-.a{
-    background-color: #0A0A0A;
+.a {
+  background-color: #0a0a0a;
 }
 .top-box {
   background-color: #231309;
   border: 1px solid #ff6900;
   border-radius: 20px;
 }
-.priv-text h6{
-    color: #f67216;
+.priv-text h6 {
+  color: #f67216;
 }
-.priv-text p{
-    color: #f0aa00;
+.priv-text p {
+  color: #f0aa00;
 }
 
 .icon-box {
@@ -65,7 +64,7 @@
 .section-number {
   width: 30px;
   height: 30px;
-  background-image: linear-gradient(135deg ,#ff6900 , #f0aa00);
+  background-image: linear-gradient(135deg, #ff6900, #f0aa00);
   color: #fff;
   font-weight: bold;
   display: flex;
@@ -80,7 +79,6 @@
   color: #ff6900;
   font-weight: 600;
   text-decoration: none;
-
 }
 
 .email-link i {
@@ -89,8 +87,112 @@
 
 .email-link:hover {
   color: #ff6900;
-
 }
-.x{
+.x {
   color: #ff6900;
+}
+/* 📱 Mobile (<768px) */
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 80px;
+  }
+
+  .hero h1.display-5 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+  }
+
+  .circle-404 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .circle-404 i {
+    font-size: 20px;
+  }
+
+  .top-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .priv-text h6 {
+    font-size: 0.9rem;
+  }
+
+  .priv-text p {
+    font-size: 0.8rem;
+  }
+
+  .section-number {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+
+  .a .container.col-8 {
+    width: 95%;
+  }
+
+  .email-link {
+    font-size: 0.85rem;
+    gap: 5px;
+  }
+}
+
+/* 🖥 Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero {
+    padding-top: 100px;
+  }
+
+  .hero h1.display-5 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .circle-404 {
+    width: 55px;
+    height: 55px;
+  }
+
+  .circle-404 i {
+    font-size: 22px;
+  }
+
+  .top-box {
+    flex-direction: row;
+    padding: 15px;
+  }
+
+  .priv-text h6 {
+    font-size: 1rem;
+  }
+
+  .priv-text p {
+    font-size: 0.95rem;
+  }
+
+  .section-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+
+  .a .container.col-8 {
+    width: 85%;
+  }
+
+  .email-link {
+    font-size: 0.9rem;
+  }
 }

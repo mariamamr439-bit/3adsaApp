@@ -1,52 +1,39 @@
 <div class="col-12">
-        <div class="blog-card row g-0">
-          
-          <div class="col-md-6 position-relative overflow-hidden">
-            <img [src]="post.image"
-                 class="img-fluid blog-img"
-                 [alt]="post.title">
+  <div class="blog-card row g-0" [routerLink]="['/blog', post.slug]" style="cursor: pointer">
+    <div class="col-md-6 position-relative overflow-hidden">
+      <img [src]="post.image" class="img-fluid blog-img" [alt]="post.title" />
 
-            <span class="badge badge-featured">
-              <i class="fas fa-star me-1"></i> مميز
-            </span>
-          </div>
+      <span class="badge badge-featured"> <i class="fas fa-star me-1"></i> مميز </span>
+    </div>
 
-          <div class="col-md-6 p-4 p-md-5 d-flex flex-column justify-content-center">
-            
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <span class="category-badge">{{post.category}}</span>
-              <small class="text-gray">
-                <i class="far fa-clock me-1"></i>{{post.readTime}}  
-              </small>
-            </div>
+    <div class="col-md-6 p-4 p-md-5 d-flex flex-column justify-content-center">
+      <div class="d-flex align-items-center gap-3 mb-3">
+        <span class="category-badge">{{ post.category }}</span>
+        <small class="text-gray"> <i class="far fa-clock me-1"></i>{{ post.readTime }} </small>
+      </div>
 
-            <h3 class="card-title text-white">
-              {{post.title}}
-            </h3>
+      <h3 class="card-title text-white">
+        {{ post.title }}
+      </h3>
 
-            <p class="text-gray">
-                {{post.excerpt}}
-            </p>
+      <p class="text-gray">
+        {{ post.excerpt }}
+      </p>
 
-            <div class="d-flex justify-content-between align-items-center mt-auto">
-              
-              <div class="d-flex align-items-center gap-3">
-                <img [src]="post.author.avatar"
-                     class="author-img"
-                     alt="">
-                <div>
-                  <p class="mb-0 text-white fw-semibold">{{post.author.name}}</p>
-                  <small class="text-gray">{{post.date}}</small>
-                </div>
-              </div>
-
-              <a href="#" class="read-more">
-                اقرأ المقال
-                <i class="fas fa-arrow-left ms-1"></i>
-              </a>
-
-            </div>
-
+      <div class="d-flex justify-content-between align-items-center mt-auto">
+        <div class="d-flex align-items-center gap-3">
+          <img [src]="post.author.avatar" class="author-img" alt="" />
+          <div>
+            <p class="mb-0 text-white fw-semibold">{{ post.author.name }}</p>
+            <small class="text-gray">{{ post.date }}</small>
           </div>
         </div>
+
+        <span class="read-more">
+          اقرأ المقال
+          <i class="fas fa-arrow-left ms-1"></i>
+        </span>
       </div>
+    </div>
+  </div>
+</div>

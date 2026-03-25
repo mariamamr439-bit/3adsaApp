@@ -42,3 +42,65 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* 📱 Mobile (<768px) */
+@media (max-width: 767px) {
+
+  .hero {
+    padding-top: 80px;
+  }
+
+  .first {
+    width: 40%;
+    padding: 4px 8px;
+  }
+
+  .first .small {
+    font-size: 12px;
+  }
+
+  .icon1 {
+    font-size: 4px;
+  }
+
+  .icon2 {
+    font-size: 8px;
+  }
+
+  .hero h1.display-4 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .hero p.fs-5 {
+    font-size: 0.85rem;
+  }
+}
+
+/* 🖥 Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .hero {
+    padding-top: 100px;
+  }
+
+  .first {
+    width: 20%;
+  }
+
+  .icon1 {
+    font-size: 5px;
+  }
+
+  .icon2 {
+    font-size: 10px;
+  }
+
+  .hero h1.display-4 {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+  }
+
+  .hero p.fs-5 {
+    font-size: 1rem;
+  }
+}

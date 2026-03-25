@@ -97,3 +97,36 @@
 .x{
   color: #ff6900;
 }
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero { padding-top: 120px; }
+  h1.display-5 { font-size: 2rem; }
+  .circle-404 { width: 55px; height: 55px; }
+  .circle-404 i { font-size: 22px; }
+  .top-box { flex-direction: column; align-items: flex-start; text-align: end; gap: 10px; }
+  .priv-text p { font-size: 0.95rem; }
+  .section-number { width: 28px; height: 28px; font-size: 14px; }
+}
+
+@media (max-width: 768px) {
+  .hero { padding-top: 100px; }
+  h1.display-5 { font-size: 1.8rem; }
+  .circle-404 { width: 50px; height: 50px; }
+  .circle-404 i { font-size: 20px; }
+  .top-box { padding: 15px; }
+  .priv-text p { font-size: 0.9rem; }
+  .section-number { width: 25px; height: 25px; font-size: 13px; }
+  .container.col-8 { width: 90%; }
+}
+
+@media (max-width: 576px) {
+  h1.display-5 { font-size: 1.6rem; }
+  .circle-404 { width: 45px; height: 45px; }
+  .circle-404 i { font-size: 18px; }
+  .top-box { padding: 10px; flex-direction: column; align-items: flex-start; text-align: end; }
+  .priv-text h6 { font-size: 1rem; }
+  .priv-text p { font-size: 0.85rem; }
+  .section-number { width: 22px; height: 22px; font-size: 12px; }
+  .email-link span { font-size: 0.9rem; }
+  .d-flex.justify-content-center p, .d-flex.justify-content-center a { font-size: 0.85rem; }
+}
