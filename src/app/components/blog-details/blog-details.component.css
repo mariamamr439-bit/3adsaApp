@@ -352,3 +352,145 @@ color:#9ca3af;
 font-size:14px;
 line-height:1.7;
 }
+/* 📱 Blog Page Mobile Fixes */
+@media (max-width: 767px) {
+
+  /* HERO */
+  .hero-section {
+    height: auto;
+    min-height: 350px;
+  }
+
+  .hero-img {
+    height: auto;
+  }
+
+  .hero-content {
+    padding: 20px !important;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    max-width: 100%;
+  }
+
+  .custom-breadcrumb {
+    flex-wrap: wrap;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .hero-text .d-flex.flex-wrap.gap-3 {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .author-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .author-box img {
+    width: 45px;
+    height: 45px;
+  }
+
+  /* ARTICLE */
+  .article-heading {
+    font-size: 1.3rem;
+    gap: 8px;
+  }
+
+  .article-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .quote-box {
+    padding: 15px;
+  }
+
+  /* TAGS */
+  .tags-box {
+    padding: 15px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  /* SHARE BOX */
+  .share-box .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .share-btn {
+    width: 45%;
+  }
+
+  /* AUTHOR CARD */
+  .author-card .d-flex.flex-column.flex-sm-row {
+    flex-direction: column;
+    gap: 15px;
+    text-align: start;
+  }
+
+  .author-text.text-center.text-sm-end {
+    text-align: start !important;
+  }
+
+  .author-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    position: static;
+    margin-top: 30px;
+  }
+
+  .toc-link {
+    font-size: 13px;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .toc-number {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  .toc-text {
+    font-size: 13px;
+  }
+
+  /* INFO & SUBSCRIBE CARDS */
+  .info-card, .subscribe-card, .share-box {
+    padding: 15px;
+  }
+
+  .subscribe-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .subscribe-card .icon-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .subscribe-title {
+    font-size: 1rem;
+  }
+
+  .subscribe-text {
+    font-size: 13px;
+  }
+}
